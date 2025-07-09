@@ -5,30 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>guess the number</title>
+
 </head>
 <style>
-    body {
+    /* 🎨 Styling for the main container */
+    div {
         text-align: center;
         margin-top: 15%;
         border: solid 1px black;
         width: 30%;
         margin-left: 35%;
         background-color: antiquewhite;
+        font-size: 18px;
+        padding: 20px;
     }
 
-    input,button{
+    /* 🎨 Styling input and button spacing */
+
+    input,
+    button {
         padding: 5px;
+    }
+
+    /* Base styles for larger screens (default) */
+
+    /* 📱 Mobile styles (max-width: 600px) */
+    @media screen and (max-width: 600px) {
+        div {
+            font-size: 16px;
+            padding: 10px;
+            width: 400px;
+            margin: 0;
+            align-items: center;
+            margin-left: 30px;
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+
     }
 </style>
 
 <body>
-    <h1> Guess the Number 1 to 5</h1>
-    <input type="text" placeholder="Enter the Number" id="input">
-    <button id="btn" onclick="checkthenumber()">click</button>
-    <p id="result">You are Right / wrong</p>
-    <p id="gueses">Available Guesses:3</p>
+    <!-- ✅ Main game container -->
+    <div>
+        <h1> Guess the Number 1 to 5</h1>
+        <input type="text" placeholder="Enter the Number" id="input">
+        <button id="btn" onclick="checkthenumber()">click</button>
+        <p id="result">You are Right / wrong</p>
+        <p id="gueses">Available Guesses:3</p>
 
-    <script src="script.js"></script>
+        <!-- 📜 Linking the external JavaScript file -->
+        <script src="script.js"></script>
+    </div>
 </body>
 
 </html>
